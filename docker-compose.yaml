@@ -5,6 +5,7 @@ services:
         build:
             context: './nginx'
             dockerfile: Dockerfile
+        network: host
         ports:
             - 80:80
     hbase:
@@ -12,6 +13,7 @@ services:
             context: './hbase'
             dockerfile: Dockerfile
         image: harisekhon/hbase
+        network: host
         ports:
             - 2181:2181
         depends_on:
@@ -19,6 +21,7 @@ services:
     
     mysql:
         image: mysql:5.7
+        network: host
         ports:
             - 3306:3306
         environment:
