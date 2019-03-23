@@ -1,1 +1,0 @@
-FROM bankmonitor/spring-boot
